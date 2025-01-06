@@ -1,0 +1,273 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+  
+  /* Landing Page Styles */
+  .landing-page {
+    height: 100vh;
+    background: linear-gradient(to right, black, grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+  
+h1 {
+    font-size: 48px;
+    margin: 0;
+}
+  
+p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+  
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: red;
+    display: flex;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberi bayangan */
+    transition: background-color 0.3s ease; /* Animasi hover */
+}
+  
+button:hover {
+    background-color: #d19527
+}
+
+/* Styling untuk container tombol di kanan atas */
+.top-right-buttons {
+    position: absolute;
+    top: 20px; /* Jarak dari atas */
+    right: 20px; /* Jarak dari kanan */
+    display: flex;
+    gap: 10px; /* Jarak antar tombol */
+}
+
+/* Styling untuk setiap tombol */
+.top-right-btn {
+    background-color: red; /* Warna background hijau */
+    color: white; /* Warna teks */
+    padding: 10px 20px; /* Ukuran padding di dalam tombol */
+    border: none; /* Menghilangkan border default */
+    border-radius: 5px; /* Membuat sudut tombol melengkung */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat di hover */
+    font-size: 14px; /* Ukuran teks */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberi bayangan */
+    transition: background-color 0.3s ease; /* Animasi hover */
+}
+
+/* Efek hover untuk tombol */
+.top-right-btn:hover {
+    background-color: #d19527; /* Warna saat di hover */
+}
+
+
+  /* About Me Section */
+.about-section {
+    padding: 60px 20px;
+    background-color: #d8cece;
+    text-align: center;
+}
+  
+.about-section p {
+    font-size: 1.4rem;
+    margin: 10px auto;
+    color: rgb(89, 81, 81);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+.about-section img {
+    max-width: 100%;
+    height: auto;
+    max-height: 350px; 
+    object-fit: cover; 
+}
+  
+/* Portfolio Section */
+.portfolio-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Grid Container for Portfolio Items */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center; /* Centers items horizontally */
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Agar project rata di tengah */
+    gap: 20px; /* Jarak antar project */
+  }
+  
+.portfolio-item {
+    flex: 1 1 300px; /* Set ukuran minimum setiap project */
+    max-width: 300px; /* Batas maksimal lebar item */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.image-slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.image-size {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+    width: 100%;
+    display: none;
+    max-width: 600px;
+    height: auto;
+}
+
+.slider-image.active {
+    display: block;
+}
+
+.slider-buttons {
+    min-width: 80px; 
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    
+}
+
+.slider-button {
+    padding: 8px 16px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.slider-button:hover {
+    background-color: #e64a19;
+}
+
+a.text-black {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+a.text-black:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(191, 173, 173);
+    margin: 0;
+    padding: 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center; /* Rata tengah secara horizontal */
+    align-items: center; /* Rata tengah secara vertikal */
+    gap: 30px; /* Jarak antar ikon */
+    flex-wrap: wrap; /* Supaya ikon bisa turun ke bawah jika layar terlalu kecil */
+  }
+  
+
+  
+  /* Media query untuk layar yang lebih kecil */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column; /* Kembali ke tata letak vertikal di layar kecil */
+      gap: 20px; /* Jarak antar ikon sedikit diperkecil */
+    }
+  }
+  
+.contact-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Agar text berada di tengah */
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* Memastikan judul Contact Me berada di tengah */
+}
+
+.contact-item {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.contact-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-icon {
+    width: 50px; /* Menyamakan ukuran icon */
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    display: block;
+    font-size: 1em;
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-info:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+.back-home {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: red;
+}
+
+.back-home:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
